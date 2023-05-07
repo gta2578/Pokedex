@@ -1,0 +1,99 @@
+
+.titleText {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 500px;
+    border: 1px solid #000000;
+    font-size: 36px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+}
+
+.filterTitle {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.listContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px 0 0 50px;
+    max-width: 530px;
+}
+
+.loadMoreBtn {
+    width: 100%;
+    padding: 15px;
+    background-color: #2687ff;
+    border-radius: 12px;
+    border: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.loadMoreBtn:hover {
+    background-color: #094fa7;
+}
+
+.typeFilterWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto 0 auto;
+}
+
+.typeFilterItem {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0 30px 20px 0;
+}
+
+.typeFilterLabel {
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+@media (max-width: 900px) {
+    .titleText {
+        width: 530px;
+    }
+
+    .listContainer {
+        width: 530px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 605px) {
+    .titleText {
+        width: 320px;
+    }
+
+    .listContainer {
+        width: 360px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .titleText {
+        width: 250px;
+    }
+
+    .listContainer {
+        width: 250px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,96 @@
+.infoContainer {
+    display: none;
+    position: absolute;
+    left: 635px;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #000000;
+}
+
+.imagePlaceholderInfo {
+    width: 100%;
+    height: 228px;
+    border: 1px solid #938a8a;
+}
+
+.diagonalFirstInfo {
+    border-bottom: 1px solid #938a8a;
+    width: 141%;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.diagonalSecondInfo {
+    border-top: 1px solid #938a8a;
+    width: 141%;
+    transform: rotate(-45deg);
+    transform-origin: 271px 113px;
+}
+
+.typeItemWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.typeItem {
+    width: 100%;
+}
+
+.infoName {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mainInfoContainer {
+    border: 1px solid #000000;
+    border-bottom: none;
+}
+
+.itemInfoContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.itemInfoName {
+    width: 70%;
+    padding: 5px;
+    text-align: center;
+}
+
+.itemInfoValue {
+    width: 30%;
+    padding: 5px;
+    text-align: center;
+    border-left: 1px solid #000000;
+}
+
+.active {
+    display: block;
+}
+
+
+@media (max-width: 900px) {
+    .infoContainer {
+        display: block;
+        position: unset;
+        margin: 50px auto 0 auto;
+        background: #ffffff;
+    }
+
+    .mainInfoWrapper {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        position: fixed;
+        background: rgba(19, 18, 18, 0.54);
+        cursor: not-allowed;
+    }
+}

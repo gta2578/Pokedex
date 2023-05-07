@@ -1,0 +1,104 @@
+
+.itemContainer {
+    width: 150px;
+    height: 250px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.itemContainer:hover {
+    box-shadow: 5px 5px 5px #bab2b2;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 128px;
+    border: 1px solid #938a8a;
+}
+
+.diagonalFirst {
+    border-bottom: 1px solid #938a8a;
+    width: 141%;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.diagonalSecond {
+    border-top: 1px solid #938a8a;
+    width: 141%;
+    transform: rotate(-45deg);
+    transform-origin: 151px 63px;
+}
+
+.nameTitle {
+    margin: 15px 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.itemTypeContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.itemType {
+    width: 45%;
+    padding: 4px;
+    text-align: center;
+    background-color: red;
+    border-radius: 4px;
+    color: #000000;
+}
+
+.purple {
+    background-color: #ca41f5;
+    border: 1px solid #7b1695;
+}
+
+.pink {
+    background-color: #dd8f9c;
+    border: 1px solid #9e4351;
+}
+
+.yellow {
+    background-color: #f9ed82;
+    border: 1px solid #aa9f00;
+}
+
+.green {
+    background-color: #a7f9a7;
+    border: 1px solid #09a109;
+}
+
+.grey {
+    background-color: #b1afaf;
+    border: 1px solid #766d6d;
+}
+
+.closeIconWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.closeIcon {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 900px) {
+    .closeIcon {
+        display: block;
+    }
+}
+
+@media (max-width: 425px) {
+    .itemContainer {
+        margin: 0 auto 20px auto;
+    }
+}
