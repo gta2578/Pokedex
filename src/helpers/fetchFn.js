@@ -1,5 +1,6 @@
 
-export const getPokemonList = (baseUrl, pokemonList, setPokemonList, setBaseUrl) => {
+export const getPokemonList = (baseUrl, pokemonList, setPokemonList, setBaseUrl, setLoading) => {
+    setLoading(true);
     fetch(baseUrl)
         .then(response => response.json())
         .then(res => {
@@ -8,7 +9,10 @@ export const getPokemonList = (baseUrl, pokemonList, setPokemonList, setBaseUrl)
         })
         .catch((error) => {
             console.log('error', error);
-        });
+        })
+        .finally(() => {
+            setLoading(false);
+        })
 }
 
 export const getPokemonItem = (itemUrl, setItemInfo) => {

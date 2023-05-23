@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Pokemon } from "../pokemon/Pokemon";
 import { getPokemonList } from "../../helpers/fetchFn";
 import { Checkbox } from "../checkbox/Checkbox";
+import { Loader } from "../loader/Loader";
 
 import "./PokemonList.css"
 
@@ -19,6 +20,7 @@ export const PokemonList = () => {
     const [typeList, setTypeList] = useState([]);
     const [mainItemInfo, setMainItemInfo] = useState([]);
     const [filters, setFilters] = useState(initFilters);
+    const [loading, setLoading] = useState(false);
 
 
     const uniqueTypeList = typeList.filter(function(item, pos) {
@@ -51,11 +53,11 @@ export const PokemonList = () => {
     }, [pokemonList])
 
     useEffect(() => {
-        getPokemonList(baseUrl, pokemonList, setPokemonList, setBaseUrl);
+        getPokemonList(baseUrl, pokemonList, setPokemonList, setBaseUrl, setLoading);
     }, [])
 
     const getMorePokemons = () => {
-        getPokemonList(baseUrl, pokemonList, setPokemonList, setBaseUrl);
+        getPokemonList(baseUrl, pokemonList, setPokemonList, setBaseUrl, setLoading);
     }
 
     const filterTypeItems = (item) => {
@@ -122,6 +124,7 @@ export const PokemonList = () => {
 
     return (
         <>
+            {loading && <Loader/>}
             <div className='titleText'>Pokedex</div>
             <div className='filterTitle'>Filter by type:</div>
             <div className='typeFilterWrapper'>
@@ -152,7 +155,7 @@ export const PokemonList = () => {
                         typeList={typeList}
                     />
                 })}
-                <button onClick={getMorePokemons} className='loadMoreBtn'>Load More</button>
+                <button disabled={loading} onClick={getMorePokemons} className='loadMoreBtn'>Load More</button>
             </div>
         </>
     )
